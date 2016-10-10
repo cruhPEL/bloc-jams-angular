@@ -38,7 +38,7 @@
         
         Fixtures.getCollection = function(numberOfAlbums) {
             var albums = [];
-            for (var i = 0; i < 12; i++) {
+            for (var i = 0; i < numberOfAlbums; i++) {
                 albums.push(angular.copy(Fixtures.getAlbum()));
             }
             return albums;
