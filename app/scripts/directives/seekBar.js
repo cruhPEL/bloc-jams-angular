@@ -51,14 +51,21 @@
                 };
                 
 /**
+* @method scope.thumbStyle
+* @desc Returns the left position of the seek bar fill element based on the calculated percent.
+*/
+                scope.thumbStyle = function() {
+                    return {left: percentString()};
+                };                
+                
+/**
 * @method scope.onClickSeekBar
 * @desc Updates the seek bar value based on the seek bar's width and the location of the user's click on the seek bar.
 * @param {Object} event
 */
                 scope.onClickSeekBar = function(event) {
                     var percent = calculatePercent(seekBar, event);
-                    scope.value = percent * scope.max;
-                    console.log(percent);
+                    scope.value = percent * scope.max;                    
                 };
                 
 /**
